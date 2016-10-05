@@ -4,7 +4,7 @@ module.exports = function(options = {}){
 
   return function(req, res, next){
     if (req.method === 'GET') return next();
-    if (!req.headers['Content-Type'].includes('multipart/form-data')) next();
+    if (!req.headers['content-type'].includes('multipart/form-data')) next();
 
     var form = new formidable.IncomingForm();
 
