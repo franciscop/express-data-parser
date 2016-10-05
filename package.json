@@ -1,6 +1,6 @@
 {
   "name": "express-data-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Middleware data parser for images and files using formidable",
   "main": "index.js",
   "scripts": {
