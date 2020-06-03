@@ -20,7 +20,7 @@
     "form-data",
     "form"
   ],
-  "author": "Francisco Presencia Fandos <publicfrancisco@hotmail.com>",
+  "author": "Francisco Presencia <publicfrancisco@hotmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/franciscop/express-file-upload/issues"
