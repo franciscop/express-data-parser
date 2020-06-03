@@ -1,31 +1,30 @@
 {
-  "name": "express-file-upload",
+  "name": "upload-files-express",
   "version": "0.1.0",
   "description": "An easy way to handle file uploads on the server with express",
-  "main": "index.js",
+  "homepage": "https://github.com/franciscop/upload-files-express#readme",
+  "repository": "https://github.com/franciscop/upload-files-express.git",
+  "bugs": "https://github.com/franciscop/upload-files-express/issues",
+  "funding": "https://www.paypal.me/franciscopresencia/19",
+  "author": "Francisco Presencia <publicfrancisco@hotmail.com>",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "demo": "node demo.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/franciscop/express-file-upload.git"
-  },
   "keywords": [
+    "express",
     "data",
     "parser",
     "middleware",
     "formidable",
     "multipart",
     "form-data",
-    "form"
+    "form",
+    "upload",
+    "files"
   ],
-  "author": "Francisco Presencia <publicfrancisco@hotmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/franciscop/express-file-upload/issues"
-  },
-  "homepage": "https://github.com/franciscop/express-file-upload#readme",
+  "main": "index.js",
+  "files": [],
   "dependencies": {
     "formidable": "^1.0.17"
   },

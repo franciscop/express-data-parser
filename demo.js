@@ -1,10 +1,10 @@
 const express = require("express");
-const fileUpload = require(".");
+const uploadFiles = require(".");
 
 const app = express();
 
 // Add it as a middleware to parse the incoming files
-app.use(fileUpload());
+app.use(uploadFiles());
 
 // A simple HTML form on the home
 app.get("/", (req, res) => {

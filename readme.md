@@ -1,12 +1,12 @@
-# express-file-upload
+# upload-files-express
 
-An easy way to handle file uploads on the server with express. The files will be part of the `req.files`, and these are located in your filesystem:
+An easy way to handle file uploads on the server with express. The files are uploaded in the filesystem and are part of `req.files`:
 
 ```js
-const fileUpload = require('express-file-upload');
+const uploadFiles = require('upload-files-express');
 
 // Pass any options that you want here:
-app.use(fileUpload());
+app.use(uploadFiles());
 
 app.post('/form', (req, res) => {
   // The key is the name="" in the original form
@@ -34,18 +34,18 @@ app.post('/form', (req, res) => {
 First install it with npm:
 
 ```bash
-npm install express-file-upload
+npm install upload-files-express
 ```
 
 Then you have to import it and load it as an [express middleware](https://expressjs.com/en/guide/using-middleware.html) in your server:
 
 ```js
 const express = require('express');
-const fileUpload = require('express-file-upload');
+const uploadFiles = require('upload-files-express');
 
 const app = express();
 
-app.use(fileUpload());
+app.use(uploadFiles());
 
 // ...
 ```
@@ -57,7 +57,7 @@ app.use(fileUpload());
 It uses `formidable` to parse the data, so [you can use any of formidable's configuration options](https://github.com/felixge/node-formidable#api). Pass the options with an object:
 
 ```js
-app.use(fileUpload({
+app.use(uploadFiles({
   uploadDir: './uploads',
   maxFileSize: 10 * 1024 * 1024   // ~10 MB
 }));
@@ -99,10 +99,10 @@ You likely want to upload your files to a 3rd party storage service, since most 
 To keep our files we can upload these to S3, Backblaze's B2, Google's GCS, etc. We are using a fictitious service here `some-service`:
 
 ```js
-const fileUpload = require('express-file-upload');
+const uploadFiles = require('upload-files-express');
 const service = require('some-service');
 
-app.use(fileUpload());
+app.use(uploadFiles());
 
 // We made the callback async to be able to `await` on it inside
 app.post('/form', async (req, res, next) => {
