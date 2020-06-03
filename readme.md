@@ -160,3 +160,5 @@ app.post('/form', async (req, res, next) => {
 ## Author & License
 
 Made by [Francisco Presencia](http://francisco.io/) under the MIT License.
+
+A small part of the docs coming from [formidable](https://github.com/node-formidable/formidable), since that's a dependency for this library. This project was previously named [`express-data-parser`](https://www.npmjs.com/package/express-data-parser).
