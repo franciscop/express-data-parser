@@ -1,6 +1,6 @@
 # upload-files-express
 
-An easy way to handle file uploads on the server with express. The files are saved in the filesystem and are part of `req.files`:
+An easy way to handle file uploads on the server with express. The files are saved in the filesystem and put in `req.files`:
 
 ```js
 const uploadFiles = require('upload-files-express');
