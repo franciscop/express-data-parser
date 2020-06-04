@@ -1,4 +1,4 @@
-# upload-files-express
+# Upload files express
 
 An easy way to handle file uploads on the server with express. The files are saved in the filesystem and put in `req.files`:
 
