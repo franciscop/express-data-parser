@@ -1,6 +1,6 @@
 {
   "name": "upload-files-express",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "An easy way to handle file uploads on the server with express",
   "homepage": "https://github.com/franciscop/upload-files-express#readme",
   "repository": "https://github.com/franciscop/upload-files-express.git",
