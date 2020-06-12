@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     <html lang="en">
       <head><meta charset="UTF-8"><title>File Upload Demo</title></head>
       <body>
-        <form action="/form" method="POST" enctype='multipart/form-data'>
+        <form action="/form" method="POST" enctype="multipart/form-data">
           <input type="text" name="name" required />
           <input type="file" name="profile" required />
           <button>Send</button>
