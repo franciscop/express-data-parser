@@ -40,7 +40,7 @@ app.post("/form", (req, res) => {
   //   }
   // }
 
-  res.json({ file: req.files.profile.path });
+  res.json(req.files.profile);
 });
 
 app.listen(3000);

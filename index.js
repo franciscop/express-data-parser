@@ -1,7 +1,7 @@
 const formidable = require("formidable");
 
-module.exports = function(options = {}) {
-  return function(req, res, next) {
+module.exports = function (options = {}) {
+  return function (req, res, next) {
     // These cannot have a body at all, so don't even attempt it
     if (req.method === "GET" || req.method === "DELETE") return next();
 
@@ -19,19 +19,23 @@ module.exports = function(options = {}) {
       options.keepExtensions = true;
     }
 
-    const form = new formidable.IncomingForm(options);
+    if (options.hash) {
+      options.hashAlgorithm = options.hash;
+    }
 
-    form.parse(req, function(err, fields, files) {
-      if (err) next(err);
+    const form = formidable(options);
+
+    form.parse(req, function (err, fields, files) {
+      if (err) return next(err);
       req.body = fields;
       req.files = {};
       for (let file in files) {
         req.files[file] = {
-          path: files[file].path,
-          name: files[file].name,
-          type: files[file].type,
+          path: files[file].filepath,
+          name: files[file].originalFilename,
+          type: files[file].mimetype,
           size: files[file].size,
-          modified: files[file].lastModifiedDate
+          modified: files[file].lastModifiedDate,
         };
       }
       next();
